@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grillora</title>
+
+<link rel="stylesheet" href="index.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav>
+<div class="logo premium-logo">
+    <div class="logo-icon">
+        <span class="flame"></span>
+    </div>
+    <div class="logo-text">
+        <span class="logo-main">Grill</span><span class="logo-accent">ora</span>
+    </div>
+</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#tracking">Tracking</a></li>
+<li><a href="#payment">Payment</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<div class="nav-right">
+<div class="cart">
+<i class="fa fa-shopping-cart"></i>
+<span id="cartCount">0</span>
+</div>
+
+<button id="themeToggle" class="theme-btn">
+<i class="fa fa-moon"></i>
+</button>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-content">
+<h1>
+<span class="color-text">Authentic Taste</span><br>
+That Wins Every Mood
+</h1>
+
+<p>Freshly Prepared • Hygienic Kitchen • Fastest Delivery </p>
+
+<div class="hero-buttons">
+<button onclick="scrollMenu()">Explore Menu</button>
+<button class="secondary-btn">Order Now</button>
+</div>
+</div>
+
+<div class="hero-image">
+<img src="Food.jpg" alt="Hero Food">
+</div>
+</section>
+
+<!-- SIGNATURE -->
+<section class="section dark">
+<h2>🔥 Our Signature Special</h2>
+<div class="best-box">
+<img src="mainimg.jpg">
+<div>
+<h3>Royal Non-Veg Platter</h3>
+<p class="price">⭐ 4.9 Rating | ₹500</p>
+<p>
+A premium selection of Biryani , Butter Chicken , Kebab & Fresh Rumali Roti
+perfectly cooked with traditional spices and rich flavors.
+</p>
+<button onclick="addToCart(500)">Order Now</button>
+</div>
+</div>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="section">
+<h2>Our Popular Dishes</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="img1.jpg">
+<h3>Chicken Biryani</h3>
+<p class="price">₹250</p>
+<p>Long grain basmati rice cooked with aromatic spices.</p>
+<button onclick="addToCart(250)">Order</button>
+</div>
+
+<div class="card">
+<img src="img2.webp">
+<h3>Butter Chicken</h3>
+<p class="price">₹300</p>
+<p>Creamy tomato gravy with tender chicken pieces.</p>
+<button onclick="addToCart(300)">Order</button>
+</div>
+
+<div class="card">
+<img src="img3.jpg">
+<h3>Chicken Korma</h3>
+<p class="price">₹220</p>
+<p>Mildly spiced curry with rich Mughlai texture.</p>
+<button onclick="addToCart(220)">Order</button>
+</div>
+
+<div class="card">
+<img src="img4.jpg">
+<h3>Nahari</h3>
+<p class="price">₹280</p>
+<p>Slow-cooked traditional Delhi special dish.</p>
+<button onclick="addToCart(280)">Order</button>
+</div>
+
+<div class="card">
+<img src="img8.jpg">
+<h3>Chicken Fry</h3>
+<p class="price">₹340</p>
+<p>Crispy, juicy chicken fry packed with bold spices.</p>
+<button onclick="addToCart(340)">Order</button>
+</div>
+
+<div class="card">
+<img src="img9.webp">
+<h3>Chicken Changeji</h3>
+<p class="price">₹250</p>
+<p>Spicy, creamy Chicken Changezi with rich flavor.</p>
+<button onclick="addToCart(250)">Order</button>
+</div>
+
+<div class="card">
+<img src="img5.webp">
+<h3>Seekh Kebab</h3>
+<p class="price">₹160</p>
+<p>Juicy minced meat grilled to perfection.</p>
+<button onclick="addToCart(160)">Order</button>
+</div>
+
+<div class="card">
+<img src="img7.webp">
+<h3>Rumali Roti</h3>
+<p class="price">₹15 / piece</p>
+<p>Soft & thin hand-tossed bread.</p>
+<button onclick="addToCart(15)">Order</button>
+</div>
+
+<div class="card">
+<img src="img6.jpeg">
+<h3>Tandoori Roti</h3>
+<p class="price">₹12 / piece</p>
+<p>Freshly baked in clay oven.</p>
+<button onclick="addToCart(12)">Order</button>
+</div>
+
+</div>
+</section>
+
+<!-- TRACKING -->
+<section id="tracking" class="section dark">
+<h2>Live Order Tracking</h2>
+
+<div class="map-container">
+<iframe src="https://maps.google.com/maps?q=Jama%20Masjid%20Delhi&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+<div id="deliveryBike" class="bike">🚴</div>
+</div>
+
+<button onclick="startTracking()">Start Delivery</button>
+</section>
+
+<!-- PAYMENT -->
+<section id="payment" class="section">
+<h2>Secure Payment</h2>
+
+<div class="payment-ui">
+<h3>Total: ₹<span id="totalAmount">0</span></h3>
+<input type="text" placeholder="Full Name">
+<input type="text" placeholder="Card / UPI ID">
+<select>
+<option>UPI</option>
+<option>Credit/Debit Card</option>
+<option>Cash on Delivery</option>
+</select>
+<button onclick="checkout()">Pay Now</button>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section dark">
+<h2>About Us</h2>
+<p>
+Located at Jama Masjid Delhi , we serve authentic North Indian cuisine
+prepared with premium ingredients and strict hygiene standards.
+Our mission is to deliver unforgettable taste with unbeatable service.
+</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+<h2>Contact Us</h2>
+<div class="contact-box">
+<div>
+<p>📍 Jama Masjid Gate No. 1 , Delhi , India</p>
+<p>📞 +91 9801283228</p>
+<p>📧 sultanmuz02@gmail.com</p>
+<p>🕒 10AM - 12AM</p>
+</div>
+
+<iframe src="https://maps.google.com/maps?q=Jama%20Masjid%20Delhi&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
+</section>
+
+<footer>© 2026 Grillora | All Rights Reserved</footer>
+<script src="index.js"></script>
+</body>
+</html>
